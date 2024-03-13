@@ -17,7 +17,6 @@ base {
 }
 
 repositories {
-    maven { url "https://api.modrinth.com/maven" }
 }
 
 dependencies {
@@ -55,21 +54,4 @@ publishing {
             from components.java
         }
     }
-}
-
-/**
- * Adds a mod from Modrinth to your mod.
- */
-void addMod(String name, String version, ModState state) {
-    dependencies {
-        if (state == ModState.COMPILE_ONLY) modCompileOnly("maven.modrinth:" + name + ":" + version)
-        else if (state == ModState.IDE_ONLY) modImplementation("maven.modrinth:" + name + ":" + version)
-        else if (state == ModState.JAR_IN_JAR) include(modImplementation("maven.modrinth:" + name + ":" + version))
-    }
-}
-
-enum ModState {
-    JAR_IN_JAR,
-    IDE_ONLY,
-    COMPILE_ONLY
 }
