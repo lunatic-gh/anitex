@@ -53,6 +53,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: build/libs/*.jar
+          asset_path: ./build/libs/*.jar
           asset_name: anitex-${SHORT_SHA}.jar
           asset_content_type: application/jar
