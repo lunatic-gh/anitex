@@ -9,7 +9,7 @@ loom {
     accessWidenerPath = new File("src/main/resources/" + project.artifact_id + ".accesswidener")
 }
 
-version = project.mod_version
+//version = project.mod_version
 group = project.group_id
 
 base {
