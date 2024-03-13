@@ -12,8 +12,5 @@
   "environment": "*",
   "mixins": [
     "test.mixins.json"
-  ],
-  "depends": {
-    "fabric-api": "*"
-  }
+  ]
 }

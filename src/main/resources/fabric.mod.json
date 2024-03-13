@@ -13,8 +13,5 @@
   "mixins": [
     "anitex.mixins.json"
   ],
-  "depends": {
-    "fabric-api": "*"
-  },
   "accessWidener": "anitex.accesswidener"
 }
