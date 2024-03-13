@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "anitex",
+  "version": "${version}",
+  "name": "AniTex",
+  "description": "Easy-to-use API for rendering animated Textures",
+  "authors": [
+    "Lunatic"
+  ],
+  "license": "MIT",
+  "icon": "assets/anitex/icon.png",
+  "environment": "*",
+  "mixins": [
+    "anitex.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "*"
+  },
+  "accessWidener": "anitex.accesswidener"
+}
