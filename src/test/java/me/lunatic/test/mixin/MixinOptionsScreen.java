@@ -50,6 +50,6 @@ public class MixinOptionsScreen extends Screen {
         // x/y - the top-left position of where to render the texture
         // width/height - the width and height to use when rendering the texture. NOT THE ACTUAL TEXTURE FILE DIMENSIONS!
         // delta - the millisecond-difference between the current and last frame. Same as the context, this is provided by most mc rendering methods.
-        this.sampleTextureFromFile.render(context, 0, 0, this.width, this.height, delta);
+        this.sampleTextureFromFile.render(context, 0, 0, this.width, this.height);
     }
 }

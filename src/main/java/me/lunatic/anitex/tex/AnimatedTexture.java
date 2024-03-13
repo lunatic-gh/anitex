@@ -26,7 +26,7 @@ public class AnimatedTexture {
         Collections.rotate(this.frames, -1);
     }
 
-    public void render(DrawContext context, int x, int y, int width, int height, float delta) {
+    public void render(DrawContext context, int x, int y, int width, int height) {
         if (this.prevTime == 0L) {
             this.prevTime = System.currentTimeMillis();
         }
