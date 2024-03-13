@@ -16,6 +16,8 @@ public class MixinOptionsScreen extends Screen {
 
     @Inject(method = "init", at = @At("TAIL"))
     public void init(CallbackInfo ci) {
+        // BIG NOTE: You almost never want to create textures more than once. Depending on the amount of frames, this may result in a lot of memory-consumption.
+        // This is just as an example. Rather register them once on startup, and inside a reload listener (https://fabricmc.net/wiki/tutorial:custom_resources)
         // Here we create a new AnimatedTexture Object. Also provide the delay in milliseconds.
         this.sampleTexture = new AnimatedTexture(1000);
         // If you want it to actually render anything, you need to also load in some frames.
