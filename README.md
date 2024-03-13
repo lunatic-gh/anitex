@@ -37,5 +37,6 @@ public class MixinOptionsScreen extends Screen {
         this.sampleTexture.render(context, 0, 0, this.width, this.height, delta);
     }
 }
-
 ```
+
+For more examples, check `src/test/java/*`
