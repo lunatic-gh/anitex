@@ -31,7 +31,6 @@ public class AnimatedTexture {
             this.prevTime = System.currentTimeMillis();
         }
         Frame frame = this.frames.get(0);
-        System.out.println(frame.id().getPath());
         context.drawTexture(frame.id(), x, y, width, height, 0, 0, frame.width(), frame.height(), frame.width(), frame.height());
         long l = System.currentTimeMillis();
         if (l >= this.prevTime + delayMs) {
