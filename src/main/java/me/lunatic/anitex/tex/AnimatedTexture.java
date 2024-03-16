@@ -27,15 +27,18 @@ public class AnimatedTexture {
     }
 
     public void render(DrawContext context, int x, int y, int width, int height) {
+        boolean b = this.frames.size() > 1;
         if (this.prevTime == 0L) {
             this.prevTime = System.currentTimeMillis();
         }
         Frame frame = this.frames.get(0);
         context.drawTexture(frame.id(), x, y, width, height, 0, 0, frame.width(), frame.height(), frame.width(), frame.height());
-        long l = System.currentTimeMillis();
-        if (l >= this.prevTime + delayMs) {
-            this.nextFrame();
-            this.prevTime = l;
+        if (b) {
+            long l = System.currentTimeMillis();
+            if (l >= this.prevTime + delayMs) {
+                this.nextFrame();
+                this.prevTime = l;
+            }
         }
     }
 
